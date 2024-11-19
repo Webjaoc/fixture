@@ -35,7 +35,7 @@ document.getElementById("generateFixture").addEventListener("click", () => {
 
 // Botón para resetear todo
 document.getElementById("resetAll").addEventListener("click", () => {
-  if (confirm("¿Estás seguro de que quieres reiniciar todo?")) {
+  if (confirm("Sind Sie sicher, dass Sie alles neu starten möchten?")) {
     teams = [];
     matches = [];
     standings = {};
