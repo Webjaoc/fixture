@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fixture</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Spielplan und Positionstabelle</h1>
+        <div class="input-section">
+          <input type="text" id="teamName" placeholder="Team name">
+          <button type="button" id="addTeam">Team hinzufügen</button>
+        </div>
+        <div id="teamsList">
+          <h2>Eingetragene Teams</h2>
+          <ul id="teamDisplay"></ul>
+        </div>
+        <div>
+          <button type="button" id="generateFixture">Fixture generieren</button>
+        </div>
+        <div id="fixture">
+          <h2>Fixture</h2>
+          <div id="matches"></div>
+        </div>
+        <div id="standings">
+          <h2>Positionstabelle</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Mannschaft</th>
+                <th>Spiele</th>
+                <th>Punkte</th>
+              </tr>
+            </thead>
+            <tbody id="standingsTable"></tbody>
+          </table>
+        </div>
+        <div id="reset">
+            <button type="button" id="resetAll">Alle neu starten</button>
+        </div>
+        
+      
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
