@@ -79,5 +79,22 @@ body {
     padding-bottom: 5px;
     font-size: 1.5rem;
   }
+  #countdown{
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+  }
+  #countdown p{
+    font-size: 50px;
+  }
+  #countdown button{
+    border:1px solid white;
+    width: 100px;
+    
+  }
+
   
   

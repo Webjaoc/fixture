@@ -132,11 +132,70 @@ function renderStandings() {
   });
 }
 
+
 // Guardar estado en localStorage
 function saveState() {
   localStorage.setItem("teams", JSON.stringify(teams));
   localStorage.setItem("matches", JSON.stringify(matches));
   localStorage.setItem("standings", JSON.stringify(standings));
 }
+
+let countdownInterval;
+let remainingTime = 5 * 60; // 5 minutos en segundos
+let isRunning = false; // Estado inicial del temporizador
+
+// Elementos del DOM
+const timerDisplay = document.getElementById("timer");
+const startStopBtn = document.getElementById("startStopBtn");
+const resetBtn = document.getElementById("resetBtn");
+
+// Función para actualizar el temporizador en pantalla
+function updateTimerDisplay() {
+    const minutes = Math.floor(remainingTime / 60);
+    const seconds = remainingTime % 60;
+    timerDisplay.textContent = 
+        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
+
+// Función para iniciar o detener el temporizador
+function startStopTimer() {
+    if (isRunning) {
+        // Detener el temporizador
+        clearInterval(countdownInterval);
+        isRunning = false;
+        startStopBtn.textContent = "Start";
+    } else {
+        // Iniciar el temporizador
+        countdownInterval = setInterval(() => {
+            if (remainingTime > 0) {
+                remainingTime--;
+                updateTimerDisplay();
+            } else {
+                clearInterval(countdownInterval);
+                alert("¡El tiempo se ha terminado!");
+                isRunning = false;
+                startStopBtn.textContent = "Start";
+            }
+        }, 1000);
+        isRunning = true;
+        startStopBtn.textContent = "Stop";
+    }
+}
+
+// Función para reiniciar el temporizador
+function resetTimer() {
+    clearInterval(countdownInterval);
+    remainingTime = 5 * 60; // Reiniciar a 5 minutos
+    updateTimerDisplay();
+    isRunning = false;
+    startStopBtn.textContent = "Start";
+}
+
+// Asignar eventos a los botones
+startStopBtn.addEventListener("click", startStopTimer);
+resetBtn.addEventListener("click", resetTimer);
+
+// Inicializar el temporizador en pantalla
+updateTimerDisplay();
 
 
