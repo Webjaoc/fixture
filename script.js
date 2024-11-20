@@ -172,7 +172,7 @@ function startStopTimer() {
                 updateTimerDisplay();
             } else {
                 clearInterval(countdownInterval);
-                alert("¡El tiempo se ha terminado!");
+                alert("Fertig!!!");
                 isRunning = false;
                 startStopBtn.textContent = "Start";
             }
