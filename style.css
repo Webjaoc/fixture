@@ -8,10 +8,22 @@ body {
   .container {
     max-width: 800px;
     margin: 20px auto;
-    padding: 20px;
+    padding: 5px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .teams{
+    background-color: aquamarine;
+    padding: 10px;
+  }
+  #fixture{
+    background-color: cadetblue;
+    padding: 10px;
+  }
+  #genFixture{
+    width: 100%;
+    text-align: center;
   }
   
   h1, h2 {
@@ -53,7 +65,18 @@ body {
   
   ul li {
     padding: 5px 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid #191616;
+  }
+  p{
+    font-size: 20px;
+  }
+  hr{
+    height: 3px;
+    background-color: #191616;
+  }
+  #standings{
+    background-color: rgb(212, 191, 163);
+    padding: 10px;
   }
   
   table {
@@ -69,6 +92,7 @@ body {
   th, td {
     padding: 10px;
     text-align: center;
+    border: 1px solid black;
   }
   #reset{
     text-align: center;
@@ -79,6 +103,7 @@ body {
     padding-bottom: 5px;
     font-size: 1.5rem;
   }
+
   #countdown{
     border: 1px solid black;
     border-radius: 10px;

@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container">
+      <div class="teams">
         <h1>Spielplan und Positionstabelle</h1>
         <div class="input-section">
           <input type="text" id="teamName" placeholder="Team name">
@@ -17,9 +18,10 @@
           <h2>Eingetragene Teams</h2>
           <ul id="teamDisplay"></ul>
         </div>
-        <div>
+        <div id="genFixture">
           <button type="button" id="generateFixture">Fixture generieren</button>
         </div>
+      </div>
         <div id="fixture">
           <h2>Fixture</h2>
           <div id="matches"></div>
