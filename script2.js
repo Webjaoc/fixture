@@ -36,7 +36,7 @@ function generateBalancedFixture(teams) {
 
   // Validar si el número de equipos es par; si no, agregar un "bye"
   if (teamCount % 2 !== 0) {
-    teams.push("bye");
+    teams.push("leer");
   }
 
   const totalRounds = teams.length - 1;
@@ -52,7 +52,7 @@ function generateBalancedFixture(teams) {
       const team1 = i === 0 ? teams[0] : rotatingTeams[i - 1];
       const team2 = rotatingTeams[rotatingTeams.length - i - 1];
 
-      if (team1 !== "bye" && team2 !== "bye") {
+      if (team1 !== "leer" && team2 !== "leer") {
         roundMatches.push({ team1, team2, result: null });
       }
     }
